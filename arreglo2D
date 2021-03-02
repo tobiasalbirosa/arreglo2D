@@ -1,0 +1,24 @@
+// ARRGLO DE DOS DIMENSIONES
+// AQUI DECLARAMOS Y CONSTRUIMOS LA ESTRUCTURA DE NUESTRO ARREGLO:
+int [][] miArreglo =  {
+                        { 100, 123},
+                        { 150, 100},
+                        { 120, 40},
+                        { 80, 62},
+                        { 300, 160},
+                        { 200, 40},
+                        { 300, 230},
+                        { 250, 260}
+                      };
+void setup() {
+  size(480,480);
+}
+void draw() {
+  // GUARDAMOS LA CANTIDAD CASILLEROS QUE POSEE NUESTRO ARREGLO:
+  int cantCasilleros = miArreglo.length;
+  // RECORREMOS Y UTILIZAMOS LOS VALORES DE NUESTRO ARREGLO:
+  for (int i = 0; i < cantCasilleros; i++) {
+    fill((255/cantCasilleros) * i);
+    rect(miArreglo[i][0],miArreglo[i][1],50,50);
+  }
+}
